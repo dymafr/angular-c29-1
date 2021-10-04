@@ -20,6 +20,7 @@ export class AuthService {
       .get<User>('https://dyma-staging.fr:5001/api/auth/currentuser')
       .pipe(
         tap((user: User) => {
+          console.log(user);
           this.user$.next(user);
           if (user) {
             this.isLoggedin$.next(true);

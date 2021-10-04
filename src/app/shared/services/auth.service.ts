@@ -32,7 +32,7 @@ export class AuthService {
   }
 
   public inscription(user: User): Observable<any> {
-    return this.http.post('/api/user', user);
+    return this.http.post('https://dyma-staging.fr:5001/api/user', user);
   }
 
   public connexion(credentials: {
